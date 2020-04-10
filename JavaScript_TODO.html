@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" placeholder="Type your new item here please" name="input">
+    </div>
+
+    <button type="button">Click ME!</button>
+
+  
+  
+  
+  
+<!-- thsi is where the magic happens-->
+
+  <script type="text/javascript">
+
+  let doSomethingButton = document.getElementById("doSomethingButton");
+  let elements = document.getElementById("elements");
+
+
+   // this function is going to add and remove items from my list...
+
+  doSomethingButton.onclick = function () {
+    let myNewElement = document.createElement("div"); 
+    let myNewElementText = document.createTextNode("HelloWorls!");
+     myNewElement.appendChild(myNewElementText);
+     elements.appendChild(myNewElement);
+
+     myNewElement.onclick = function() {
+        elements.removeChild(myNewElement);
+     }
+   }
+ 
+    </script>
+
+
+</body>
+</html>
