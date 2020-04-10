@@ -3,38 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="JavaScript_TODO.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <input type="text" placeholder="Type your new item here please" name="input">
+    <div id="container">
+    
+    <input id="textInput" type="text" placeholder="Type your new item here please" name="input">
+
+    <button id="inputSomethingButton" type="button">Add</button>
+
+    </div>  
+
+    <div id="list">
+
     </div>
 
-    <button type="button">Click ME!</button>
-
-  
-  
-  
-  
-<!-- thsi is where the magic happens-->
 
   <script type="text/javascript">
+    
+    var MakelistItem = document.getElementById("list");
+    var textInput = document.getElementById("textInput");
 
-  let doSomethingButton = document.getElementById("doSomethingButton");
-  let elements = document.getElementById("elements");
+
+    inputSomethingButton.onclick = function() {
+        let MakelistItem = document.createElement("li");
+        let MakelistButton = document.createElement("button");
+    
+        MakelistItem.appendChild(document.createTextNode(textInput.value));
+        MakelistItem.appendChild(MakelistButton);
+
+        list.appendChild(MakelistItem);
+  
+   
 
 
-   // this function is going to add and remove items from my list...
-
-  doSomethingButton.onclick = function () {
-    let myNewElement = document.createElement("div"); 
-    let myNewElementText = document.createTextNode("HelloWorls!");
-     myNewElement.appendChild(myNewElementText);
-     elements.appendChild(myNewElement);
-
-     myNewElement.onclick = function() {
-        elements.removeChild(myNewElement);
-     }
+    MakelistItem.onclick = function () {
+        list.removeChild(MakelistItem)
+    }
    }
  
     </script>
