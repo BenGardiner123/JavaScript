@@ -7,16 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="container">
+    <div class="main">
+
+            <div class="container">
+            
+            <input id="textInput" type="text" placeholder="Type your new item here please" name="input">
+
+            <button id="inputSomethingButton" type="button">Add</button>
+
+            
+            <div id="list">
+
+            </div>
+
+            </div>
     
-    <input id="textInput" type="text" placeholder="Type your new item here please" name="input">
-
-    <button id="inputSomethingButton" type="button">Add</button>
-
-    </div>  
-
-    <div id="list">
-
     </div>
 
 
@@ -29,20 +34,20 @@
    
     inputSomethingButton.onclick = function() {
         
-        let MakelistItem = document.createElement("li");
-        let MakelistButton = document.createElement("button");
+        let MakelistItem = document.createElement("ul");
+       // let MakelistButton = document.createElement("button");
 
-        MakelistButton.innerHTML = "X";
+        //MakelistButton.innerHTML = "X";
     
-        MakelistItem.appendChild(document.createTextNode(textInput.value));
-        MakelistItem.appendChild(MakelistButton);
+        MtakelistIem.appendChild(document.createTextNode(textInput.value));
+       // MakelistItem.appendChild(MakelistButton);
         
         list.appendChild(MakelistItem);
   
    
 
-    //this allows usto remove the lsit item by clicking on it
-         MakelistButton.onclick = function () {
+    //this allows usto remove the listt item by clicking on it
+         MakelistItem.onclick = function () {
         list.removeChild(MakelistItem);
 
         MakelistButton.onclick = function(){

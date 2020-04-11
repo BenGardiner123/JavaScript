@@ -1,3 +1,27 @@
-.list{
-    display: inline;
-    background-color: red;
+.container {
+    text-align: center;
+}
+
+#textInput{
+    align-content: center;
+    height: 34px;
+    width: 300px;
+    font-size: 35px;
+    padding: 1%
+}
+
+#inputSomethingButton{
+    box-sizing: content-box;
+    height: 40px;
+    width: 67px;
+    font-size: 35px;
+}
+
+#list{
+    margin: 0;
+    vertical-align: middle;
+    line-height: 70px;
+    background-color: rgb(229, 232, 235);
+    font-size: 35px;
+    color: black;
+    
