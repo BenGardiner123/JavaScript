@@ -14,7 +14,7 @@
             <input id="textInput" type="text" placeholder="Type your new item here please" name="input">
 
             <button id="inputSomethingButton" type="button">Add</button>
-
+            <button id="removeAllButton" type="button">Go Nuclear!</button>       
             
             <div id="list">
 
@@ -26,6 +26,7 @@
 
 
   <script type="text/javascript">
+    
     //id the divs and make them variable to use in my function
     var MakelistItem = document.getElementById("list");
     var textInput = document.getElementById("textInput");
@@ -34,7 +35,7 @@
    
     inputSomethingButton.onclick = function() {
         
-        let MakelistItem = document.createElement("ul");
+        let MakelistItem = document.createElement("li");
        // let MakelistButton = document.createElement("button");
 
         //MakelistButton.innerHTML = "X";
@@ -58,8 +59,16 @@
             MakelistItem.style.backgroundColor = "grey";
         }
 
+        }
 
     }
+    //this button is going to remove everything from the list
+    removeAllButton.onclick =  function(){
+            while (list.hasChildNodes()) {  
+            list.removeChild(list.firstChild);
+        }
+
+
    }
  
     </script>

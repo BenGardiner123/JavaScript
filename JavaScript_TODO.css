@@ -20,9 +20,19 @@
 }
 
 #list{
-    width: 300px;
+    list-style: none;
+    padding-left: 10%;
+    padding-right: 10%;
+    
     background-color: rgb(229, 232, 235);
     font-size: 35px;
     color: black;
     margin: auto;
 } 
+
+#removeAllButton{
+    box-sizing: content-box;
+    height: 40px;
+    width: auto;
+    font-size: 35px;
+}
