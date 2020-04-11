@@ -9,7 +9,7 @@
 <body>
     <div class="main">
 
-            <div class="container">
+            <div id="container">
             
             <input id="textInput" type="text" placeholder="Type your new item here please" name="input">
 
@@ -39,14 +39,14 @@
 
         //MakelistButton.innerHTML = "X";
     
-        MtakelistIem.appendChild(document.createTextNode(textInput.value));
+        MakelistItem.appendChild(document.createTextNode(textInput.value));
        // MakelistItem.appendChild(MakelistButton);
         
         list.appendChild(MakelistItem);
   
    
 
-    //this allows usto remove the listt item by clicking on it
+    //this allows usto remove the lsit item by clicking on it
          MakelistItem.onclick = function () {
         list.removeChild(MakelistItem);
 

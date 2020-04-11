@@ -1,5 +1,7 @@
-.container {
+#container {
     text-align: center;
+    padding: 12%;
+    
 }
 
 #textInput{
@@ -18,10 +20,9 @@
 }
 
 #list{
-    margin: 0;
-    vertical-align: middle;
-    line-height: 70px;
+    width: 300px;
     background-color: rgb(229, 232, 235);
     font-size: 35px;
     color: black;
-    
+    margin: auto;
+} 
