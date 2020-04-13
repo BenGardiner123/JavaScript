@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="JavaScript_TODO.css">
     <title>Document</title>
 </head>
@@ -20,18 +21,27 @@
                 <button id="removeAllButton" type="button">Go Nuclear!</button>       
                 </div>
                 
+                
+                <div class="dropdown">
+                    <button onclick="listFunction()" class="w3-button w3-black">Click Me!</button>
+                        <div id="drop_dwn" class="w3-dropdown-content w3-bar-block w3-border">
+                        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                        <a href="#" class="w3-bar-item w3-button">Link 2</a>                   <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                        </div>
+                </div>
+
                 <div class="three_list">
 
-                    <div class="list">
-                        <h1>Shoping List</h1>
+                    <div class="list" id="shop_list">
+                        <ul>Shoping List</ul>
                     </div>
 
-                    <div class="list">
-                        <h1>Shopping Queue</h1>
+                    <div class="list" id="shop_que">
+                        <ul>Shopping Queue</ul>
                     </div>
 
-                    <div class="list">
-                       <h1>Slap Queue</h1>
+                    <div class="list" id="slap_que">
+                       <ul>Slap Queue</ul>
                     </div>
 
                 </div>
@@ -63,7 +73,7 @@
         list.appendChild(MakelistButton);
         list.appendChild(MakelistItem);
   
-   
+        
 
         //this will remove the list item and the complete button
          
@@ -81,6 +91,16 @@
             MakelistButton.style.backgroundColor = "red";
 
         }
+    
+        //this is the dropdown menu for selecting the list and inputing the data into the selected list
+        function myFunction() {
+        var x = document.getElementById("Demo");
+        if (x.className.indexOf("w3-show") == -1) { 
+        x.className += " w3-show";
+        } else {
+        x.className = x.className.replace(" w3-show", "");
+  }
+}
 
         
 
